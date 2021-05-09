@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src=""></script>
+    <title>COMP-2130 Web Dev Project</title>
+</head>
+
+<body>
+    <script>
+            var textbox = document.createElement("input")
+            var textboxText = document.createTextNode("Type here")
+            textbox.type = "textbox"
+            textbox.id = "info"
+            document.body.appendChild(textbox)
+            textbox.appendChild(textboxText)
+
+            var button = document.createElement("button")
+            var buttonText = document.createTextNode("Submit")
+            button.type = "button"
+            button.id = "go"
+            document.body.appendChild(button)
+            button.appendChild(buttonText)
+
+            input = document.getElementById("info")
+            button = document.getElementById("go")
+
+            button.addEventListener("word", onClick)
+
+            function onClick()
+            {
+                var inputText = input.value
+
+                // if (inputText.toLowerCase().includes("storage")) 
+                // {
+                // storage();
+                // }
+                // if (inputText.toLowerCase().includes("jquery"))
+                // {
+                //     jquery();
+                // }
+                // if (inputText.toLowerCase().includes('plugin'))
+                // {
+                //     plugin();
+                // }
+                // if (inputText.toLowerCase().includes("ajax"))
+                // {
+                //     ajax();
+                // }
+                if (inputText.toLowerCase().includes("alphabet"))
+                {
+                    abc();
+                }
+            }
+
+      </script>
+      <script src = "./ajax.js"></script>
+      <script src = "./alphabet.js"></script>
+
+
+</body>
+</html>

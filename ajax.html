@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COMP-2130 Web Dev Project</title>
+</head>
+<body>
+    <script>
+            // ajax
+            function ajax()
+            {
+                var ajaxExample = new XMLHttpRequest()
+                ajaxExample.open("get", "advice.txt", true)
+
+                var adviceText = document.createElement("h1")
+                // adviceText.id= "advice";
+                document.body.appendChild(adviceText)
+                // var quote = JSON.parse(text)
+                // text.innerText = text.toUpperCase()
+
+                ajaxExample.onreadystatechange = function()
+                {
+                    if(ajaxExample.status == 200)
+                    {
+                        var upperCase = JSON.parse(ajaxExample.responseText)
+                        for(var i = 0; i < upperCase.text.length; i++)
+                        {
+                            adviceText.innerHTML += upperCase.text[i].toUpperCase()
+                            adviceText.innerHTML += ""
+                        }
+                    }
+                    // let adviceText = ajaxExample.responseText
+                    // document.getElementById("advice").innerHTML = JSON.stringify(adviceText)
+                }
+                ajaxExample.send(null) 
+            }
+
+            ajax();
+            // 1XX — Informational Responses
+            // 2XX — Success Responses
+            // 3XX — Redirection Responses
+            // 4XX — Client Error Responses
+            // 5XX — Server Error Responses
+      </script>
+</body>
+</html>
