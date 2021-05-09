@@ -1,3 +1,5 @@
+
+
 function callAjax()
 {
 
@@ -12,7 +14,7 @@ function callAjax()
 
             for(i in text){
                 word += text[i] + " "
-                stage.innerHTML = word.toUpperCase()
+                stage.innerHTML = word.toUpper
             }
         }
     }

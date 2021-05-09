@@ -12,7 +12,7 @@
     <script src='./alien.js'></script>
     <script src="./jquery.js"></script>
     <script src='./ajax.js'></script>
-    <script src="./alphabet.js"></script>
+    <!-- <script src="./alphabet.js"></script> -->
     <script>
 
         // a texbox, a button.
@@ -99,7 +99,7 @@
                 storageLink.target = '_blank'
 
                 cleanStage()
-                document.getElementById('stage').append(storageLink)
+                document.body.append(storageLink)
             }
             else if( inputValue == 'ajax' )
             {
@@ -109,7 +109,7 @@
             else if( inputValue == 'alphabet' )
             {
                 cleanStage()
-                abc()
+                // alphabet()
             }
             else
             {

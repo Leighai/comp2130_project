@@ -1,3 +1,4 @@
+
 function abc()
 {
   // loop through characters 
@@ -11,7 +12,7 @@ function abc()
         image.id = letter
         image.width = 40
         
-        document.getElementById('stage').appendChild(image)
+        document.body.appendChild(image)
     }
     
 
