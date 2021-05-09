@@ -32,3 +32,7 @@ function abc()
         }
     }
 }
+
+// text in the textbox has the word “alphabet” in it then loop through the letters backwards from z to a
+// append images of the letters to the document; each letter must be 40px wide
+// letter is clicked, all the images on the document get that letter’s src.

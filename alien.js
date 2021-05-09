@@ -1,5 +1,4 @@
 // input 'alien' and button clicked, alien into the screen.
-
 // input 'walk' and button clicked, alien move 1px/100ms.
 // input 'run' and button clicked, alien move 1px/10ms.
 // input 'stop' and button clicked, alien stop.
