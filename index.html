@@ -28,9 +28,7 @@
             input = document.getElementById("info")
             button = document.getElementById("go")
 
-            button.addEventListener("word", onClick)
-
-            function onClick()
+            button.onclick = function()
             {
                 var inputText = input.value
 
@@ -53,7 +51,9 @@
                 if (inputText.toLowerCase().includes("alphabet"))
                 {
                     abc();
+                    
                 }
+                console.log(inputText)
             }
 
       </script>
