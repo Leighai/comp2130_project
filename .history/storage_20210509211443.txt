@@ -1,0 +1,15 @@
+[
+    "What is local storage (Web Storage)?",
+    "Local storage is the web storage enable application store data locally within the user's broswer",
+
+    "There are two types of local storeage",
+    "sessionStaorage and localStorage",
+
+    "What is the differenc between sessionStorage and localStorage",
+    "When close the browser, the sessionStorage will gone, and the localStorage will still be there",
+
+    "How does localStorage work?",
+    "1. setItem(): add your data key and value",
+
+
+]

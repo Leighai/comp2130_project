@@ -1,0 +1,8 @@
+[
+    "What is local storage (Web Storage)?",
+    "Local storage is the web storage enable application store data locally within the user's broswer",
+    "There are two types of local storeage",
+    " sessionStaorage and localStorage",
+    "What is the differenc between sessionStaorage and localStorage",
+
+]

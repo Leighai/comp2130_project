@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Comp2130_Project</title>
+    <!-- Warren Chen A01175829 & Leighai Nishibata A00800647 -->
+</head>
+<body>
+    <script src='./alien.js'></script>
+    <script src="./jquery.js"></script>
+    <script src='./ajax.js'></script>
+    <script src="./alphabet.js"></script>
+    <script>
+
+        // a texbox, a button.
+        function addElements()
+        {
+            var myForm = document.createElement('form')
+            var formLable = document.createElement('lable')
+            formLable.innerHTML = 'Input command:'
+            
+            var myInput = document.createElement('input')
+            myInput.type = 'text'
+            myInput.id = 'myInput'
+            
+            var myBtn = document.createElement('button')
+            myBtn.type = 'button'
+            myBtn.id = 'myBtn'
+            myBtn.innerHTML = 'Submit'
+    
+            var br = document.createElement('br')
+
+            var stage = document.createElement('div')
+            stage.id = 'stage'
+            stage.style.width = '100vw'
+            stage.style.margin = '0'
+
+            myForm.append(formLable, br, myInput, myBtn)
+            document.body.append(myForm, stage)
+        }
+
+        function cleanStage()
+        {
+            while(stage.hasChildNodes())
+            {
+                stage.removeChild(stage.firstChild)
+            }
+        }
+
+        // function on button be clicked read the value and call actions   
+        function readInput()
+        {
+            var inputValue = myInput.value.toLowerCase()
+
+            var storageLink = document.createElement('a')
+            // input 'storage', and button clicked, show hyperlink to storage.html.
+            
+            if( inputValue == 'storage')
+            {
+                cleanStage()
+                storageLink.href = './storage.html'
+                storageLink.innerHTML = 'Local Storage Demo'
+                storageLink.target = '_blank'
+                document.getElementById('stage').append(storageLink)
+            }
+            else if( inputValue == 'alien' )
+            {
+                cleanStage()
+                addAlien()
+            }
+            else if( inputValue == 'walk' )
+            {
+                alienWalk('walk')
+            }
+            else if( inputValue == 'run' )
+            {
+                alienRun('run')
+            }
+            else if( inputValue == 'stop' )
+            {
+                alienStop()
+            }
+            else if( inputValue == 'bye' )
+            {
+                cleanStage()
+            }
+            else if( inputValue == 'jquery' )
+            {
+                cleanStage()
+                callJquery()
+            }
+            else if( inputValue == 'plugin' )
+            {
+                storageLink.href = './plugin.html'
+                storageLink.innerHTML = 'Cool Jquery Plugin Demo'
+                storageLink.target = '_blank'
+
+                cleanStage()
+                document.getElementById('stage').append(storageLink)
+            }
+            else if( inputValue == 'ajax' )
+            {
+                cleanStage()
+                callAjax()
+            }
+            else if( inputValue == 'alphabet' )
+            {
+                cleanStage()
+                abc()
+            }
+            else
+            {
+                myInput.value = 'Invalid'
+            }
+
+            myInput.onfocus =() =>
+            {   
+                myInput.value = ''
+            } 
+        }
+  
+        // storage.html domo and explaining window.localStorage.
+
+        addElements()
+
+        var timer = null
+        var myInput = document.getElementById('myInput')
+        var myBtn = document.getElementById('myBtn')
+        myInput.focus()
+
+        myBtn.onclick = readInput
+
+        // input 'plugin' and button clicked, show hyperlink to plugin.html.
+        // show jquery plugin.
+
+        // input 'ajax' and button clicked, get and read text file 'advice.txt'.
+        // diplay data in h1 in UPPERCASE.
+
+        // input 'alphabet' and button clicked, disply alphabet images backwards from z, each letter 40px width.
+        // click on any letter all letter images change to that letter.
+    </script>
+</body>
+</html>
