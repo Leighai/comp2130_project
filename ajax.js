@@ -1,3 +1,4 @@
+// Leighai worked on this
 function callAjax()
 {
     var xhttp = new XMLHttpRequest()

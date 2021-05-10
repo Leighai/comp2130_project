@@ -1,6 +1,7 @@
  // input 'jquery' and button clicked, four images into screen, width 200px.
 // click second image, border bold.
 
+// Warren & Leighai worked on this
 function callJquery()
 {
     var imgNum = [1, 2, 3, 4]
