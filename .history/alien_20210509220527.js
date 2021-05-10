@@ -1,3 +1,4 @@
+ut 'bye' and button clicked, alien remove.
 
 function addAlien()
 {

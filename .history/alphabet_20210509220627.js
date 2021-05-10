@@ -11,6 +11,7 @@ function abc()
         
         document.getElementById('stage').appendChild(image)
     }
+    
 
     let allImages = document.getElementsByTagName("img")
 
