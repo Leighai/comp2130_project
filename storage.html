@@ -35,8 +35,8 @@
             {
                 let name = ask.value
                 localStorage.setItem('name', name)
-                welcome.innerHTML = 'Hi ' + name + ',  Nice to meet you!'
-                para.innerHTML = 'Close your browser and open agian see what will happen.'
+                welcome.innerHTML = 'Hi ' + name + '!  Nice to meet you!'
+                para.innerHTML = 'Close your browser and open it again to see what will happen.'
                 form.remove()
             }
         }
@@ -146,14 +146,14 @@
         
         if( storage == 0 )
         {
-            welcome.innerHTML = 'Hi, Weclome to Local Storage page!'
+            welcome.innerHTML = 'Hi! Welcome to the Local Storage page!'
             document.body.append(welcome, para)
             askName()
         }
         else
         {
-            welcome.innerHTML = 'Hi ' + name + ',  Nice to see you again!'
-            para.innerHTML = 'This is a good example of localStorage. Now the browser remember your name even after closing the browser. </br></br> Click the button to learn more -->'
+            welcome.innerHTML = 'Hi ' + name + '!  Nice to see you again!'
+            para.innerHTML = 'This is a good example of local storage. Now the browser remembers your name even after you close the browser. </br></br> Click the button below to learn more -->'
             document.body.append(welcome, para, storageBtn1)
 
             storageBtn1.onclick = learnLocalStorage1
