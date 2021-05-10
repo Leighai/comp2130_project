@@ -1,6 +1,5 @@
 function callAjax()
 {
-
     var xhttp = new XMLHttpRequest()
     
     xhttp.onreadystatechange = function()
@@ -18,5 +17,9 @@ function callAjax()
     }
     xhttp.open('get', 'advice.txt', true)
     xhttp.send()
-
 } 
+
+// textbox has the word “ajax” in it, then create an XMLHttpRequest object 
+// GET request to read data from a text file named “advice.txt”
+// h1 object (use document.createElement and document.body.appendChild) in UPPERCASE
+//  advice in advice.txt is actually an array of words in JSON format
