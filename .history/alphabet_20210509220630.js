@@ -1,5 +1,3 @@
-// Leighai worked on this
-
 function abc()
 {
     for(let i = 'z'.charCodeAt(0); i >= 'a'.charCodeAt(0); i--)

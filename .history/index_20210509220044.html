@@ -14,9 +14,8 @@
     <script src='./ajax.js'></script>
     <script src="./alphabet.js"></script>
     <script>
-        
-        // Warren and Leighai worked on this together 
-        // a texbox, a button
+
+        // a texbox, a button.
         function addElements()
         {
             var myForm = document.createElement('form')
@@ -43,7 +42,6 @@
             document.body.append(myForm, stage)
         }
 
-        // Warren worked on this
         function cleanStage()
         {
             while(stage.hasChildNodes())
@@ -52,13 +50,13 @@
             }
         }
 
-        // Warren worked on this
         // function on button be clicked read the value and call actions   
         function readInput()
         {
             var inputValue = myInput.value.toLowerCase()
 
             var storageLink = document.createElement('a')
+            // input 'storage', and button clicked, show hyperlink to storage.html.
             
             if( inputValue == 'storage')
             {
@@ -129,8 +127,8 @@
                 myInput.value = ''
             } 
         }
-        
-        // storage.html demo and explaining window.localStorage.
+  
+        // storage.html domo and explaining window.localStorage.
 
         addElements()
 
@@ -141,6 +139,7 @@
 
         myBtn.onclick = readInput
 
+        
     </script>
 </body>
 </html>

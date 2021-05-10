@@ -1,7 +1,6 @@
-// Leighai worked on this
-
 function abc()
 {
+  // loop through characters 
     for(let i = 'z'.charCodeAt(0); i >= 'a'.charCodeAt(0); i--)
     {
         let letter = String.fromCharCode(i)
@@ -13,6 +12,7 @@ function abc()
         
         document.getElementById('stage').appendChild(image)
     }
+    
 
     let allImages = document.getElementsByTagName("img")
 

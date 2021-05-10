@@ -1,5 +1,4 @@
 
-// Warren worked on this
 function addAlien()
 {
     let box = document.createElement('div')
