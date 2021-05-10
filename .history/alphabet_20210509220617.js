@@ -1,9 +1,11 @@
 function abc()
 {
+  // loop through characters 
     for(let i = 'z'.charCodeAt(0); i >= 'a'.charCodeAt(0); i--)
     {
         let letter = String.fromCharCode(i)
 
+        // create img in each run of loop + make src ".png"
         let image = document.createElement('img')
         image.src = "letters/" + letter + ".png"
         image.id = letter
@@ -11,6 +13,7 @@ function abc()
         
         document.getElementById('stage').appendChild(image)
     }
+    
 
     let allImages = document.getElementsByTagName("img")
 

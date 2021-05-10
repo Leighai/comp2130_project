@@ -25,10 +25,10 @@
     </div>
     <script>
         $(".gallery").flipping_gallery({
-    direction: "forward", 
-    selector: "> a", 
-    spacing: 10, 
-    showMaximum: 15, 
+    direction: "forward", // This is will set the flipping direction when the gallery is clicked. Options available are "forward", or "backward". The default value is forward.
+    selector: "> a", // This will let you change the default selector which by default, will look for <a> tag and generate the gallery from it. This option accepts normal CSS selectors.
+    spacing: 10, // You can set the spacing between each photo in the gallery here. The number represents the pixels between each photos. The default value is 10.
+    showMaximum: 15, // This will let you limit the number of photos that will be in the viewport. In case you have a gazillion photos, this is perfect to hide all those photos and limit only a few in the viewport.
     enableScroll: true, 
     flipDirection: "bottom", 
     autoplay: false 
