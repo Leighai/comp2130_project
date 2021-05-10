@@ -4,6 +4,7 @@
 // input 'stop' and button clicked, alien stop.
 // input 'bye' and button clicked, alien remove.
 
+// Warren worked on this
 function addAlien()
 {
     let box = document.createElement('div')

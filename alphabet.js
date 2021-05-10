@@ -1,3 +1,5 @@
+// Leighai worked on this
+
 function abc()
 {
   // loop through characters 

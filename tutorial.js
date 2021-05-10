@@ -1,4 +1,4 @@
-
+// Warren worked on this
 tutorial = [
     "What is local storage (Web Storage)?",
     "Local storage is the web storage that enables the application to store data locally within the user's broswer",
