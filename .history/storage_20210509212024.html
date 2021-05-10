@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window Storage Demo</title>
+    <!-- Warren Chen A01175829 & Leighai Nishibata A00800647 -->
+</head>
+<body>
+    <script>
+        var guide = 
+        // localStorage.setItem('name', 'Paull')
+
+        function askName()
+        {
+            var form = document.createElement('form')
+            var lable = document.createElement('lable')
+            lable.innerHTML = 'What is your name? '
+            
+            var ask = document.createElement('input')
+            ask.type = 'text'
+            
+            var btn = document.createElement('button')
+            btn.type = 'button'
+            btn.innerHTML = 'Submit'
+            
+            form.append(lable, ask, btn)
+            document.body.append(form)
+            ask.focus()
+
+            btn.onclick = () =>
+            {
+                let name = ask.value
+                localStorage.setItem('name', name)
+                welcome.innerHTML = 'Hi ' + name + ',  Nice to meet you!'
+                para.innerHTML = 'Close your browser and open agian see what will happen.'
+                form.remove()
+            }
+        }
+
+        function closeWindow()
+        {
+            window.close()
+        }
+
+        function reloadWindow()
+        {
+            location.reload()
+        }
+
+        function learnLocalStorage3()
+        {
+            storageBtn1.remove()
+
+            var localStorageTitle3 = document.createElement('h3')
+            var localStorageText3 = document.createElement('p')
+
+            localStorageTitle3.innerHTML = 'Title3'
+            localStorageText3.innerHTML = 'Text3'
+
+            document.body.append( localStorageTitle3, localStorageText3, closeBtn, reloadBtn)
+            
+            closeBtn.onclick = closeWindow
+            reloadBtn.onclick = reloadWindow
+        }
+
+        function learnLocalStorage2()
+        {
+            storageBtn1.remove()
+
+            var localStorageTitle2 = document.createElement('h3')
+            var localStorageText2 = document.createElement('p')
+
+            localStorageTitle2.innerHTML = 'Title2'
+            localStorageText2.innerHTML = 'Text2'
+
+            document.body.append( localStorageTitle2, localStorageText2, storageBtn1)
+
+            storageBtn1.onclick = learnLocalStorage3
+
+        }
+
+        function learnLocalStorage1()
+        {
+            storageBtn1.remove()
+
+            var localStorageTitle1 = document.createElement('h3')
+            var localStorageText1 = document.createElement('p')
+
+            localStorageTitle1.innerHTML = 'Title1'
+            localStorageText1.innerHTML = 'Text1'
+
+            document.body.append( localStorageTitle1, localStorageText1, storageBtn1)
+
+            storageBtn1.onclick = learnLocalStorage2
+
+        }
+
+
+        var storage = localStorage.length
+        var welcome = document.createElement('h3')
+        var para = document.createElement('p')
+        welcome.id = 'welcome'
+        var name = localStorage.getItem('name')
+        var storageBtn1 = document.createElement('button')
+            storageBtn1.type = 'button'
+            storageBtn1.id = 'storageBtn1'
+            storageBtn1.innerHTML = 'Learn More'
+
+        var closeBtn = document.createElement('button')
+        closeBtn.type = 'button'
+        closeBtn.id = 'closeBtn'
+        closeBtn.innerHTML = 'Close Window'
+
+        var reloadBtn = document.createElement('button')
+        reloadBtn.type = 'button'
+        reloadBtn.id = 'reloadBtn'
+        reloadBtn.innerHTML = 'Reload Window'
+        
+        if( storage == 0 )
+        {
+            welcome.innerHTML = 'Hi, Weclome to Local Storage page!'
+            document.body.append(welcome, para)
+            askName()
+        }
+        else
+        {
+            welcome.innerHTML = 'Hi ' + name + ',  Nice to see you again!'
+            para.innerHTML = 'This is a good example of localStorage. Now the browser remember your name even after closing the browser. </br></br> Click the button to learn more -->'
+            document.body.append(welcome, para, storageBtn1)
+
+            storageBtn1.onclick = learnLocalStorage1
+        }
+        
+
+
+    </script>
+</body>
+</html>

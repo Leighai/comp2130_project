@@ -1,0 +1,6 @@
+[
+    "What is localStorage?",
+    "LocalStorage is the web storage enable application store data locally within the user's broswer",
+    ""
+
+]

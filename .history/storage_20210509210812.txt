@@ -1,0 +1,4 @@
+[
+    "What is localStorage?"
+    "LocalStorage is the web storage en"
+]

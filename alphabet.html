@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alphabet Example</title>
+    <!-- Warren Chen A01175829 & Leighai Nishibata A00800647 -->
+</head>
+<body>
+    <script>
+        function abc()
+        {
+          // loop through characters 
+            for(let i = 'z'.charCodeAt(0); i >= 'a'.charCodeAt(0); i--)
+            {
+                let letter = String.fromCharCode(i)
+
+                // create img in each run of loop + make src ".png"
+                let image = document.createElement('img')
+                image.src = "letters/" + letter + ".png"
+                image.id = letter
+                image.width = 40
+                document.body.appendChild(image)
+            }
+            
+
+            let allImages = document.getElementsByTagName("img")
+            // console.log(allImage)
+
+            for(i = 0; i < allImages.length; i++)
+            {
+                // console.log(allImage[i].src)
+                allImages[i].onclick = function()
+                {
+                    let character = this.id
+                    // this = who has been clicked, target id in all images 
+                    for (j = 0; j <allImages.length; j++)
+                    {
+                        allImages[j].src = "letters/" + character + ".png"
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>
